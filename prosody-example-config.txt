@@ -1,0 +1,27 @@
+ls -alh /etc/prosody/conf.d/
+razem 16K
+drwxr-xr-- 2 root prosody 4,0K lut 27 01:56 .
+drwxr-xr-x 5 root root    4,0K lut 26 23:52 ..
+-rw-r--r-- 1 root root     217 lut 26 23:53 chat.meet.js.cfg.lua
+-rw-r--r-- 1 root root     146 lut 25 17:10 meet.js.cfg.lua
+
+more /etc/prosody/conf.d/*
+::::::::::::::
+/etc/prosody/conf.d/chat.meet.js.cfg.lua
+::::::::::::::
+-- Section for localhost
+
+-- This allows clients to connect to localhost. No harm in it.
+VirtualHost "chat.meet.js"
+  authentication = "anonymous"
+  Component "conference.chat.meet.js" "muc"
+  anonymous_login = true
+
+::::::::::::::
+/etc/prosody/conf.d/meet.js.cfg.lua
+::::::::::::::
+-- Section for localhost
+
+-- This allows clients to connect to localhost. No harm in it.
+VirtualHost "meet.js"
+  authentication = "internal_plain"

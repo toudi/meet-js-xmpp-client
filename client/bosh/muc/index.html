@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="../../../lib/vendor/jsjac.js" type="text/javascript"></script>
+	<script type="text/javascript" src="../../../lib/scaleApp.min.js"></script>
+	<script type="text/javascript" src="../../../lib/xmpp/connection.js"></script>
+	<script type="text/javascript" src="../../../lib/xmpp/muc.js"></script>
+	<script type="text/javascript" src="xmpp-client.js"></script>
+	<script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tab.js"></script>
+	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" />
+	<link rel="stylesheet" href="../../../lib/css/style.css" />
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span6 offset4" id="login-form">
+			    <form class="form-horizontal">
+				    <div class="control-group">
+					    <label class="control-label" for="inputJid">nick</label>
+					    <div class="controls">
+					    	<input type="text" id="nick" placeholder="nick">
+					    </div>
+				    </div>
+				    <div class="control-group">
+					    <div class="controls">
+					    	<button id="login" type="button" class="btn">Login</button>
+					    </div>
+				    </div>
+			    </form>		
+			</div>
+		</div>
+		<div class="row-fluid" id="chat-ui">
+		    <div class="span9">
+		      <div class="chat-window">
+		      </div>
+		      <form class="chat-form form-search">
+			<input type="text" name="message" class="input-xxlarge" />
+			<button type="submit" class="btn" id="send-message-button">Send</button>
+			<button type="logout" class="btn" id="logout">Logout</button>
+		      </form>
+		     </div>
+		     <div class="span3">
+		      <ul id="roster" class="well">
+		      </ul>
+		     </div>
+		</div>
+	</div>	
+</body>
+</html>
